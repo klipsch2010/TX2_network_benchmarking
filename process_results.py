@@ -6,6 +6,9 @@ import os
 import subprocess
 import glob
 import re
+# used for debugging
+import json
+
 rootdir = os.path.dirname(os.path.abspath(__file__))
 # TODO Turn into input argument
 results_path = "./results/"
@@ -36,6 +39,10 @@ threshold = 70
 #                 )
 #     plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
 #     plt.show()
+class Vividict(dict):
+    def __missing__(self, key):
+        value = self[key] = type(self)()
+        return value
 
 ##############################################################################
 # Read the input CSV file and filter the data to only use the best detections 
@@ -95,7 +102,7 @@ def read_csv(file_path, confidence_threshold, removed_text):
 ##############################################################################
 # Group the sub-groupings (ex: imagetype1_1, imagetype1_2, etc)  
 ##############################################################################
-def organize_data(formatted_detection):
+def organize_data(formatted_detection, network_title):
     #Note: there is probably a more efficient way to do this. 
     #Group the lists 
 
@@ -124,7 +131,7 @@ def organize_data(formatted_detection):
 
                 #create new 2d list for new subgroup, [sublabel,[sublist2_0]]
                 sub_list = []
-                sub_list.append(element[1])
+                sub_list.append(network_title + "_" + element[1])
                 sub_list.append([])
                 sub_list2 = element[2::]
                 sub_list[1].append(sub_list2)
@@ -138,7 +145,12 @@ def organize_data(formatted_detection):
                     label_found = False
                     found_index = 0
                     for sub_element_ind in range(len(image_list_grouped[i])):
-                        if element[1] in image_list_grouped[i][sub_element_ind]:
+                        #print element[1]
+                        #print image_list_grouped[i][sub_element_ind][0]
+
+                        # if the label substring is found in the list element assigned to already found lables,
+                        # then save off the index and break the loop.
+                        if element[1] in image_list_grouped[i][sub_element_ind][0]:
                             label_found = True
                             found_index = sub_element_ind
                             break
@@ -159,6 +171,56 @@ def organize_data(formatted_detection):
         
     return image_list_grouped
 
+##############################################################################
+# Format the data into a dictionary
+##############################################################################
+def convert_to_dictionary(formatted_list):
+
+    # create an empty dictionary
+    #image_types = {}
+    image_types = Vividict()
+
+    for network_list in formatted_list:    
+        print "" 
+        for detection_type in network_list:    
+
+            temp_sublist = detection_type[1:]
+
+
+            for single_result in temp_sublist:
+                run_label = single_result[0]
+                distance_list  = []
+                confidence_list = []
+                reported_detections = []
+                for x_y in single_result[1]:
+                    distance_list.append(x_y[0])
+                    confidence_list.append(x_y[2])
+                    reported_detections.append(x_y[1])
+
+                #run_dict = Vividict()
+
+                #run_dict[run_label] = run_label
+                image_types[detection_type[0]][run_label]["distances"] = distance_list
+                image_types[detection_type[0]][run_label]["confidences"] = confidence_list
+                image_types[detection_type[0]][run_label]["reported_detections"] = reported_detections
+                #print run_label
+                #print distance_list
+                #print confidence_list
+                #print reported_detections
+                #print run_dict
+
+
+
+            #if detection_type[0] not in image_types:
+                  # if name was not found, add it and
+                  #  create a list with the corresponding entry
+                  #image_types[detection_type[0]] = detection_type[1:]
+            #      image_types[detection_type[0]] = run_dict
+            #else:
+                  # otherwise extend the corresponding list with a new entry
+                  #image_types[detection_type[0]].extend(detection_type[1:])
+            #      image_types[detection_type[0]].extend(run_dict)
+    return image_types
 
 ##############################################################################
 #MAIN
@@ -168,28 +230,31 @@ csv_file_path  = rootdir + "/" + results_path
 
 #create master list containing all results
 master_list = []
+
 #file_count  = 0
 #loop through all the results files
 for csv_file in os.listdir(csv_file_path):
     if csv_file.endswith(".txt") or csv_file.endswith(".csv"):
-        temp_list = [[],[]]
 
         #csv_file                = "results_yolov3.txt"
         folder_path             = "/home/nvidia/project/images/"
         #csv_file_path           = results_path + "/" + csv_file
 
+        # grab the network name from the path
+        temp_split   = csv_file.split('.')
+        network_name = temp_split[0].replace("results_",'')
+
         # read the files and organize the data
         csv_file_path           = results_path + "/" + csv_file
         single_nework_file_read = read_csv(csv_file_path, threshold, folder_path)
-        single_network_data     = organize_data(single_nework_file_read)
+        single_network_data     = organize_data(single_nework_file_read, network_name)
 
-        temp_split   = csv_file.split('.')
-        network_name = temp_split[0].replace("results_",'')
-        temp_list[0] = network_name
-        temp_list[1] = single_network_data
-        master_list.append(temp_list)
+        master_list.append(single_network_data)
 
 print master_list
+
+master_dict = convert_to_dictionary(master_list)
+print json.dumps(master_dict, indent=4)
 
 #TODO combine results from the different networks for plotting like data on a single graph
     #Each image type will have 9 items graphed, image1, 2, and 3, and each of the 3 networks for each image
