@@ -19,6 +19,9 @@ results_path = "./results/"
 graph_out_path = "./results/graphs"
 threshold = 70
 
+markers = ["o","+","x","o","+","x","o","+","x"]
+lines   = ['--', '-.', ':','--', '-.', ':','--', '-.', ':']
+
 # dictionary type that allows for dynamic subkey assignment
 class Vividict(dict):
     def __missing__(self, key):
@@ -186,12 +189,13 @@ def plot_the_data(results_dictionary):
     if sys.version_info[0] < 3:
         # Loop through the image types (ex: Cars)
         for key, value in results_dictionary.iteritems():
-
+            plot_cnt = 0
             # Loop through the image subtypes and plot each result (ex: Cars_1, Cars_2, etc)
             for subkey, subvalue in value.iteritems():
                 x_value = subvalue["distances"]
                 y_value = subvalue["confidences"]
-                plt.plot(subvalue["distances"], subvalue["confidences"],label=subkey, linewidth=2)
+                plt.plot(subvalue["distances"], subvalue["confidences"],label=subkey, linewidth=2, linestyle=lines[plot_cnt], marker=markers[plot_cnt] )
+                plot_cnt += 1
 
             #format the plot
             plt.xlabel('Distance (ft)')
