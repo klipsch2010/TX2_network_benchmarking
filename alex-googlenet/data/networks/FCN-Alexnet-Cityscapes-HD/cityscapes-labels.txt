@@ -1,0 +1,21 @@
+void
+dynamic
+ground
+road
+sidewalk
+parking
+building
+wall
+fence
+guard rail
+bridge tunnel
+pole
+traffic light
+traffic sign
+vegetation
+terrain
+sky
+person
+car
+truck
+cycle

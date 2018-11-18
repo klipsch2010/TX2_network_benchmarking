@@ -1,0 +1,24 @@
+{
+    "caffe flavor": "NVIDIA",
+    "caffe version": "0.15.14",
+    "creation time": "2017-05-04 13:17:06.681639",
+    "dataset_id": "20170504-125958-8476",
+    "deploy file": "deploy.prototxt",
+    "digits version": "5.1-dev",
+    "framework": "caffe",
+    "id": "20170504-131706-068e",
+    "image dimensions": [
+        640,
+        640,
+        3
+    ],
+    "job id": "20170504-131706-068e",
+    "mean file": "mean.binaryproto",
+    "model file": "original.prototxt",
+    "name": "DetectNet-COCO-Chair",
+    "snapshot file": "snapshot_iter_89500.caffemodel",
+    "solver file": "solver.prototxt",
+    "status": "Done",
+    "train_val file": "train_val.prototxt",
+    "username": "dusty"
+}

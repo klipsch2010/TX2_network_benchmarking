@@ -1,0 +1,24 @@
+{
+    "caffe flavor": "NVIDIA",
+    "caffe version": "0.15.14",
+    "creation time": "2017-05-04 13:15:54.195273",
+    "dataset_id": "20170503-114730-c0fd",
+    "deploy file": "deploy.prototxt",
+    "digits version": "5.1-dev",
+    "framework": "caffe",
+    "id": "20170504-131554-0f74",
+    "image dimensions": [
+        640,
+        640,
+        3
+    ],
+    "job id": "20170504-131554-0f74",
+    "mean file": "mean.binaryproto",
+    "model file": "original.prototxt",
+    "name": "DetectNet-COCO-Bottle",
+    "snapshot file": "snapshot_iter_59700.caffemodel",
+    "solver file": "solver.prototxt",
+    "status": "Done",
+    "train_val file": "train_val.prototxt",
+    "username": "dusty"
+}
