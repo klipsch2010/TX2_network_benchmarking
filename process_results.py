@@ -6,39 +6,20 @@ import os
 import subprocess
 import glob
 import re
+import sys
 # used for debugging
 import json
+# auto format the plots to keep the label from running out of the border
+from matplotlib import rcParams
+rcParams.update({'figure.autolayout': True})
 
 rootdir = os.path.dirname(os.path.abspath(__file__))
 # TODO Turn into input argument
 results_path = "./results/"
+graph_out_path = "./results/graphs"
 threshold = 70
 
-
-# Generate a scatter chart
-# def plot_line_graph_percent(y_values, x_values, yLabel, xLabel, SweepValues, graph_title):
-#     graphStyles = ['bs', 'ro', 'g^', 'kx', 'g--']
-    
-#     figure(num=None, figsize=(10, 10), dpi=160, facecolor='w', edgecolor='k')
-#     plt.title(graph_title)
-#     plt.ylabel(yLabel)
-#     plt.xlabel(xLabel)
-#     plt.ylim([0,100])
-    
-#     label_offset = 100
-#     for i in range(len(SweepValues)):
-#         plt.plot(y_values[i], x_values[i], graphStyles[i], label=SweepValues[i])
-#         #Label the data points
-#         for j in range(len(y_values[i])):
-#             #sub_label = str(combinedSweeps[i][j])
-#             x = x_values[i][j]+1
-#             y = y_values[i][j]
-#             plt.annotate(sub_label, 
-#                  xy=(y, x),  
-#                  xytext=(y, x)
-#                 )
-#     plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
-#     plt.show()
+# dictionary type that allows for dynamic subkey assignment
 class Vividict(dict):
     def __missing__(self, key):
         value = self[key] = type(self)()
@@ -94,8 +75,7 @@ def read_csv(file_path, confidence_threshold, removed_text):
                         if found_list[-1] < confidence: 
                             found_list[-2] = row[i]
                             found_list[-1] = confidence
-                    
-            #formatted_detection.append(image_name_list)
+
             formatted_detection.append(found_list)
         return formatted_detection  
 
@@ -145,8 +125,6 @@ def organize_data(formatted_detection, network_title):
                     label_found = False
                     found_index = 0
                     for sub_element_ind in range(len(image_list_grouped[i])):
-                        #print element[1]
-                        #print image_list_grouped[i][sub_element_ind][0]
 
                         # if the label substring is found in the list element assigned to already found lables,
                         # then save off the index and break the loop.
@@ -177,15 +155,12 @@ def organize_data(formatted_detection, network_title):
 def convert_to_dictionary(formatted_list):
 
     # create an empty dictionary
-    #image_types = {}
     image_types = Vividict()
 
-    for network_list in formatted_list:    
-        print "" 
+    for network_list in formatted_list:
         for detection_type in network_list:    
 
             temp_sublist = detection_type[1:]
-
 
             for single_result in temp_sublist:
                 run_label = single_result[0]
@@ -197,30 +172,41 @@ def convert_to_dictionary(formatted_list):
                     confidence_list.append(x_y[2])
                     reported_detections.append(x_y[1])
 
-                #run_dict = Vividict()
-
-                #run_dict[run_label] = run_label
                 image_types[detection_type[0]][run_label]["distances"] = distance_list
                 image_types[detection_type[0]][run_label]["confidences"] = confidence_list
                 image_types[detection_type[0]][run_label]["reported_detections"] = reported_detections
-                #print run_label
-                #print distance_list
-                #print confidence_list
-                #print reported_detections
-                #print run_dict
-
-
-
-            #if detection_type[0] not in image_types:
-                  # if name was not found, add it and
-                  #  create a list with the corresponding entry
-                  #image_types[detection_type[0]] = detection_type[1:]
-            #      image_types[detection_type[0]] = run_dict
-            #else:
-                  # otherwise extend the corresponding list with a new entry
-                  #image_types[detection_type[0]].extend(detection_type[1:])
-            #      image_types[detection_type[0]].extend(run_dict)
     return image_types
+
+
+##############################################################################
+# Loop throught the detections and plot them
+##############################################################################
+def plot_the_data(results_dictionary):
+    # check python version
+    if sys.version_info[0] < 3:
+        # Loop through the image types (ex: Cars)
+        for key, value in results_dictionary.iteritems():
+
+            # Loop through the image subtypes and plot each result (ex: Cars_1, Cars_2, etc)
+            for subkey, subvalue in value.iteritems():
+                x_value = subvalue["distances"]
+                y_value = subvalue["confidences"]
+                plt.plot(subvalue["distances"], subvalue["confidences"],label=subkey, linewidth=2)
+
+            #format the plot
+            plt.xlabel('Distance (ft)')
+            plt.ylabel('Confidence (%)')
+            plt.title(key)
+            plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+            # Save graph
+            if not os.path.exists(graph_out_path):
+                os.makedirs(graph_out_path)
+            result_location = graph_out_path + "/" + key + ".png"
+            print "Outputting " + result_location
+            plt.savefig(result_location, bbox_inches = "tight")
+            plt.clf()
+    else:
+        raise Exception("Must be using Python 2")
 
 ##############################################################################
 #MAIN
@@ -251,16 +237,10 @@ for csv_file in os.listdir(csv_file_path):
 
         master_list.append(single_network_data)
 
-print master_list
-
 master_dict = convert_to_dictionary(master_list)
-print json.dumps(master_dict, indent=4)
 
-#TODO combine results from the different networks for plotting like data on a single graph
-    #Each image type will have 9 items graphed, image1, 2, and 3, and each of the 3 networks for each image
-    #X axis: image distances (5,10,...,45,50)
-    #Y axis: confidence (0 to 100)
+# Plot the data
+plot_the_data(master_dict)
 
-#TODO Plot the data
 
 #TODO fix ssd results file output order. The confidence and label are reversed. 
