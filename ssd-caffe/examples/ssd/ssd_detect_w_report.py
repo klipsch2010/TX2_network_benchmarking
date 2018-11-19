@@ -140,8 +140,15 @@ def main(args):
         draw.text([xmin, ymin], item[-1] + str(item[-2]), (0, 0, 255))
         print item
         # append the result to the result file
-        for element in item[-2:]:
-            f.write('%s, ' % element)
+        #for element in item[-2:]:
+        #    f.write('%s, ' % element)
+        print "******************************************************"
+        print item[-1]
+        f.write('%s, ' % item[-1])
+        percent_calc = item[-2]*100
+        print percent_calc
+        f.write('%s%%, ' % percent_calc)
+
         print [xmin, ymin, xmax, ymax]
         print [xmin, ymin], item[-1]
     # write end of line to file
