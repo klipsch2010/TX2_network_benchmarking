@@ -72,7 +72,7 @@ def read_csv(file_path, confidence_threshold, removed_text):
 
                     # if the threshold is met, add it to the found list
                     confidence_string = row[i+1].replace("%",'')
-                    confidence        = int(confidence_string)
+                    confidence        = float(confidence_string)
                     if (image_found and confidence >= confidence_threshold):
                         #Good detection, add to list or overwrite with best result 
                         if found_list[-1] < confidence: 
