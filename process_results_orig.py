@@ -3,20 +3,24 @@ import matplotlib.pyplot as plt
 import numpy as np
 #automated reading of all files and subfiles in a directory
 import os
-#import subprocess
-#import glob
-#import re
+import subprocess
+import glob
+import re
 import sys
 # used for debugging
 import json
-from plot_multi_bar import plot_multibar
-
+# auto format the plots to keep the label from running out of the border
+from matplotlib import rcParams
+rcParams.update({'figure.autolayout': True})
 
 rootdir = os.path.dirname(os.path.abspath(__file__))
 # TODO Turn into input argument
 results_path = "./results/"
 graph_out_path = "./results/graphs"
-threshold = 0
+threshold = 70
+
+markers = ["o","+","x","o","+","x","o","+","x"]
+lines   = ['--', '-.', ':','--', '-.', ':','--', '-.', ':']
 
 # dictionary type that allows for dynamic subkey assignment
 class Vividict(dict):
@@ -37,10 +41,10 @@ def read_csv(file_path, confidence_threshold, removed_text):
         image_results = csv.reader(csvfile, delimiter=',', quotechar='|')
 
         for row in image_results:
+
             #condition the text file
-            rm_text = row[0]
-            image_name0 = rm_text.split(removed_text)
-            image_name1 = image_name0[-1].replace('.jpg','')
+            image_name0 = row [0]    .replace(removed_text,'')
+            image_name1 = image_name0.replace('.jpg'     ,'')
             #split the image characteristics into lists
             image_name_list = image_name1.split("/")
             #get the individual words from the image type to compare to detection labels
@@ -51,9 +55,6 @@ def read_csv(file_path, confidence_threshold, removed_text):
             found_list.append(image_name_list[0])
             # combine image name and image number
             found_list.append(image_name_list[0] + "_" + image_name_list[1]);
-            #found_list.append(int(image_name_list[2]))
-            #for i in range(3 ,len(image_name_list)):
-            #    found_list.append(image_name_list[i])
             for i in range(2 ,len(image_name_list)):
                 found_list.append(image_name_list[i])
             # Add the detection fillers
@@ -109,6 +110,7 @@ def organize_data(formatted_detection, network_title):
             # check if the current image type is found
             if image_list_top[i] in element[0]: 
                 # put found image type in appropriate grouping
+                #image_list_grouped[i].append(element[1:])
 
                 #create new 2d list for new subgroup, [sublabel,[sublist2_0]]
                 sub_list = []
@@ -140,7 +142,8 @@ def organize_data(formatted_detection, network_title):
                     # Image already exists, append data only (not image name) to the appropriate sublist 
                     # [sublabel_n,[sublist2_0],...,[sublist2_n]]
                     else:
-                        image_list_grouped[i][sub_element_ind][1].append(sub_list2)    
+                        image_list_grouped[i][sub_element_ind][1].append(sub_list2)
+    
 
     # sort the sublists alphabetically
     for im_ind in range(len(image_list_grouped)):
@@ -164,7 +167,7 @@ def convert_to_dictionary(formatted_list):
 
             for single_result in temp_sublist:
                 run_label = single_result[0]
-                distance_list   = []
+                distance_list  = []
                 confidence_list = []
                 reported_detections = []
                 for x_y in single_result[1]:
@@ -177,46 +180,38 @@ def convert_to_dictionary(formatted_list):
                 image_types[detection_type[0]][run_label]["reported_detections"] = reported_detections
     return image_types
 
-##############################################################################
-# 
-##############################################################################
-def subcategorybar(X, vals, width=0.8):
-    n = len(vals)
-    _X = np.arange(len(X))
-    for i in range(n):
-        plt.bar(_X - width/2. + i/float(n)*width, vals[i], 
-                width=width/float(n), align="edge")   
-    plt.xticks(_X, X)
-
 
 ##############################################################################
 # Loop throught the detections and plot them
 ##############################################################################
 def plot_the_data(results_dictionary):
-    # Loop through the image types (ex: Cars)
-    for key, value in results_dictionary.iteritems():
+    # check python version
+    if sys.version_info[0] < 3:
+        # Loop through the image types (ex: Cars)
+        for key, value in results_dictionary.iteritems():
+            plot_cnt = 0
+            # Loop through the image subtypes and plot each result (ex: Cars_1, Cars_2, etc)
+            for subkey, subvalue in value.iteritems():
+                x_value = subvalue["distances"]
+                y_value = subvalue["confidences"]
+                plt.plot(subvalue["distances"], subvalue["confidences"],label=subkey, linewidth=2, linestyle=lines[plot_cnt], marker=markers[plot_cnt] )
+                plot_cnt += 1
 
-        print "Mapping graph: " + key
-        y_lists = []
-        sub_bar_labels = []
+            #format the plot
+            plt.xlabel('Distance (ft)')
+            plt.ylabel('Confidence (%)')
+            plt.title(key)
+            plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+            # Save graph
+            if not os.path.exists(graph_out_path):
+                os.makedirs(graph_out_path)
+            result_location = graph_out_path + "/" + key + ".png"
+            print "Outputting " + result_location
+            plt.savefig(result_location, bbox_inches = "tight")
+            plt.clf()
+    else:
+        raise Exception("Must be using Python 2")
 
-        # Loop through the image subtypes and formulate the data into the lists plot_multibar expects (ex: Cars_1, Cars_2, etc)
-        for subkey, subvalue in value.iteritems():
-            x_markers    = subvalue["distances"]
-            y_lists.append(subvalue["confidences"])
-            sub_bar_labels.append(subkey)
-
-        x_label = 'Distance (ft)'
-        y_label = 'Confidence (%)'
-        title   = key
-        
-        # graph output location
-        if not os.path.exists(graph_out_path):
-            os.makedirs(graph_out_path)
-        graph_path = graph_out_path + "/" + key + ".png"
-
-        plot_multibar(y_lists, x_markers, sub_bar_labels, x_label=x_label, y_label=y_label, y_range=[0,110], title=title, graph_path=graph_path)
-        
 ##############################################################################
 #MAIN
 ##############################################################################
@@ -247,12 +242,6 @@ for csv_file in os.listdir(csv_file_path):
         master_list.append(single_network_data)
 
 master_dict = convert_to_dictionary(master_list)
-
-# Save the dictionary to a json file
-json_file_path = results_path + "results.json"
-with open(json_file_path, 'w') as file:
-     file.write(json.dumps(master_dict)) 
-print "JSON file output at " + json_file_path
 
 # Plot the data
 plot_the_data(master_dict)
