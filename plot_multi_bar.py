@@ -9,7 +9,7 @@ rcParams.update({'figure.autolayout': True})
 markers = ["o","+","x","o","+","x","o","+","x"]
 lines   = ['--', '-.', ':','--', '-.', ':','--', '-.', ':']
 #colors  = ["blue", "red", "green", "orange", "yellow", "gray", "black","lightgreen", "ivory" ,"rosybrown", "royalblue", "saddlebrown", "salmon"]
-colors  = ["skyblue", "royalblue", "navy", "yellowgreen", "seagreen", "darkgreen", "darksalmon", "red", "firebrick", "gainsboro", "darkgrey", "dimgrey", "salmon"]
+colors  = ["skyblue", "royalblue", "navy", "yellowgreen", "seagreen", "darkgreen", "darksalmon", "red", "firebrick", "darkgrey", "dimgrey", "black", "salmon"]
 
 
 ##############################################################################
@@ -36,7 +36,7 @@ def plot_multibar(y_lists, x_markers, sub_bar_labels, x_label="x_value", y_label
             #width = indices
             #         iteration   Centers the bargraph (.5)      
             width_i = (width*i) - .5
-            
+
             ax.bar(indices+width_i,sub_bars,width,color=colors[plot_cnt],tick_label=x_markers, label=sub_bar_labels[i]) 
  
             #check if out of line colors and loop back if so

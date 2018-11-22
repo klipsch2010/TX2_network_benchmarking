@@ -10,7 +10,8 @@ import sys
 # used for debugging
 import json
 from plot_multi_bar import plot_multibar
-
+from collections import OrderedDict
+from json import loads, dumps
 
 rootdir = os.path.dirname(os.path.abspath(__file__))
 # TODO Turn into input argument
@@ -54,7 +55,8 @@ def read_csv(file_path, confidence_threshold, removed_text):
             #found_list.append(int(image_name_list[2]))
             #for i in range(3 ,len(image_name_list)):
             #    found_list.append(image_name_list[i])
-            for i in range(2 ,len(image_name_list)):
+            found_list.append(int(image_name_list[2]))
+            for i in range(3 ,len(image_name_list)):
                 found_list.append(image_name_list[i])
             # Add the detection fillers
             found_list.append("")
@@ -84,7 +86,7 @@ def read_csv(file_path, confidence_threshold, removed_text):
 ##############################################################################
 # Group the sub-groupings (ex: imagetype1_1, imagetype1_2, etc)  
 ##############################################################################
-def organize_data(formatted_detection, network_title):
+def organize_data_old(formatted_detection, network_title):
     #Note: there is probably a more efficient way to do this. 
     #Group the lists 
 
@@ -150,6 +152,38 @@ def organize_data(formatted_detection, network_title):
     return image_list_grouped
 
 ##############################################################################
+# Group the sub-groupings (ex: imagetype1_1, imagetype1_2, etc)  
+##############################################################################
+def organize_data(formatted_detection, network_title, full_dictionary):
+    #Note: there is probably a more efficient way to do this. 
+    #Group the lists 
+    #print formatted_detection
+
+    for detection in formatted_detection:
+        image_name = detection[0]
+        run_label  = network_title + "_" + detection[1]
+        distance   = detection[2]
+        confidence = detection[4]
+        reported_detection = detection[3]
+
+        #check is dict has been added, if not then add new empty dict
+        if not full_dictionary.has_key(image_name):
+            full_dictionary[image_name] = {}
+
+        #check is sub-dict has been added, if not then add new empty dict
+        if not full_dictionary[image_name].has_key(run_label):
+            full_dictionary[image_name][run_label] = {}
+            full_dictionary[image_name][run_label]["distances"] = []
+            full_dictionary[image_name][run_label]["confidences"] = [] 
+            full_dictionary[image_name][run_label]["reported_detections"] = []
+
+        full_dictionary[image_name][run_label]["distances"].append(distance)
+        full_dictionary[image_name][run_label]["confidences"].append(confidence) 
+        full_dictionary[image_name][run_label]["reported_detections"].append(reported_detection)
+    
+    return full_dictionary
+
+##############################################################################
 # Format the data into a dictionary
 ##############################################################################
 def convert_to_dictionary(formatted_list):
@@ -175,18 +209,8 @@ def convert_to_dictionary(formatted_list):
                 image_types[detection_type[0]][run_label]["distances"] = distance_list
                 image_types[detection_type[0]][run_label]["confidences"] = confidence_list
                 image_types[detection_type[0]][run_label]["reported_detections"] = reported_detections
-    return image_types
 
-##############################################################################
-# 
-##############################################################################
-def subcategorybar(X, vals, width=0.8):
-    n = len(vals)
-    _X = np.arange(len(X))
-    for i in range(n):
-        plt.bar(_X - width/2. + i/float(n)*width, vals[i], 
-                width=width/float(n), align="edge")   
-    plt.xticks(_X, X)
+    return image_types
 
 
 ##############################################################################
@@ -197,11 +221,30 @@ def plot_the_data(results_dictionary):
     for key, value in results_dictionary.iteritems():
 
         print "Mapping graph: " + key
+
+        #sorted_value = sorted(value)
+        #sorted_value.sort()
+
+        ##sorted_value = OrderedDict()
+
+        ## ##go through the dictionary
+        ##for key2,val in value.items():
+        ##    sorted_value[key2] = OrderedDict(sorted(val.items()))  
+
+        ##sorted_dict = loads(dumps(sorted_value))
+
+        sorted_dict = OrderedDict(sorted(value.iteritems()))
         y_lists = []
         sub_bar_labels = []
 
+        print "-------------------"
+        print sorted_dict
+        print ""
+
+
         # Loop through the image subtypes and formulate the data into the lists plot_multibar expects (ex: Cars_1, Cars_2, etc)
-        for subkey, subvalue in value.iteritems():
+        ##for subkey, subvalue in sorted_value.iteritems():
+        for subkey, subvalue in sorted_dict.iteritems():
             x_markers    = subvalue["distances"]
             y_lists.append(subvalue["confidences"])
             sub_bar_labels.append(subkey)
@@ -226,6 +269,10 @@ csv_file_path  = rootdir + "/" + results_path
 #create master list containing all results
 master_list = []
 
+#create master dictionary containing all results
+#master_dict = Vividict()
+master_dict = {}
+
 #file_count  = 0
 #loop through all the results files
 for csv_file in os.listdir(csv_file_path):
@@ -242,11 +289,18 @@ for csv_file in os.listdir(csv_file_path):
         # read the files and organize the data
         csv_file_path           = results_path + "/" + csv_file
         single_nework_file_read = read_csv(csv_file_path, threshold, folder_path)
-        single_network_data     = organize_data(single_nework_file_read, network_name)
+        single_nework_file_read.sort(key=lambda x:x[2]) # sort by element 2
+        single_nework_file_read.sort()
+        
+        
+        #single_network_data     = organize_data(single_nework_file_read, network_name)
+        #master_list.append(single_network_data)
+        master_dict     = organize_data(single_nework_file_read, network_name,master_dict)
 
-        master_list.append(single_network_data)
 
-master_dict = convert_to_dictionary(master_list)
+print master_dict
+
+#master_dict = convert_to_dictionary(master_list)
 
 # Save the dictionary to a json file
 json_file_path = results_path + "results.json"
