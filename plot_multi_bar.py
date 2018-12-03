@@ -9,8 +9,9 @@ rcParams.update({'figure.autolayout': True})
 markers = ["o","+","x","o","+","x","o","+","x"]
 lines   = ['--', '-.', ':','--', '-.', ':','--', '-.', ':']
 #colors  = ["blue", "red", "green", "orange", "yellow", "gray", "black","lightgreen", "ivory" ,"rosybrown", "royalblue", "saddlebrown", "salmon"]
-colors  = ["skyblue", "royalblue", "navy", "yellowgreen", "seagreen", "darkgreen", "darksalmon", "red", "firebrick", "darkgrey", "dimgrey", "black", "salmon"]
-
+colors_3_pairs  = ["skyblue", "royalblue", "navy", "yellowgreen", "seagreen", "darkgreen", "darksalmon", "red", "firebrick", "darkgrey", "dimgrey", "black", "salmon"]
+colors_4_pairs  = ["skyblue", "royalblue", "blue", "navy", "yellowgreen", "seagreen", "green", "darkgreen", "darksalmon", "red", "firebrick", "darkred", "grey", "darkgrey", "dimgrey", "black", "salmon"]
+colors = colors_3_pairs
 
 ##############################################################################
 # Loop throught the detections and plot them
