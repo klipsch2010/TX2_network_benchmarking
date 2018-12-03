@@ -1,0 +1,250 @@
+yolov3, car_truck_suv_front, 1, 5,  car, 98.0
+yolov3, car_truck_suv_front, 1, 30,  truck, 77.0
+yolov3, car_truck_suv_front, 1, 20,  car, 83.0
+yolov3, car_truck_suv_front, 1, 40,  truck, 88.0
+yolov3, car_truck_suv_front, 1, 50,  truck, 89.0
+yolov3, car_truck_suv_front, 1, 15,  car, 79.0
+yolov3, car_truck_suv_front, 1, 35,  truck, 91.0
+yolov3, car_truck_suv_front, 1, 25,  car, 95.0
+yolov3, car_truck_suv_front, 1, 10,  car, 84.0
+yolov3, car_truck_suv_front, 1, 45,  truck, 87.0
+yolov3, car_truck_suv_front, 3, 5,  truck, 99.0
+yolov3, car_truck_suv_front, 3, 30,  truck, 92.0
+yolov3, car_truck_suv_front, 3, 20,  truck, 86.0
+yolov3, car_truck_suv_front, 3, 40,  truck, 86.0
+yolov3, car_truck_suv_front, 3, 50,  truck, 82.0
+yolov3, car_truck_suv_front, 3, 15,  truck, 91.0
+yolov3, car_truck_suv_front, 3, 35,  truck, 93.0
+yolov3, car_truck_suv_front, 3, 25,  truck, 84.0
+yolov3, car_truck_suv_front, 3, 10,  truck, 91.0
+yolov3, car_truck_suv_front, 3, 45,  truck, 89.0
+yolov3, car_truck_suv_front, 2, 5,  car, 98.0
+yolov3, car_truck_suv_front, 2, 30,  truck, 91.0
+yolov3, car_truck_suv_front, 2, 20,  car, 82.0
+yolov3, car_truck_suv_front, 2, 40,  truck, 85.0
+yolov3, car_truck_suv_front, 2, 50,  truck, 89.0
+yolov3, car_truck_suv_front, 2, 15,  car, 84.0
+yolov3, car_truck_suv_front, 2, 35,  truck, 94.0
+yolov3, car_truck_suv_front, 2, 25,  car, 78.0
+yolov3, car_truck_suv_front, 2, 10,  car, 96.0
+yolov3, car_truck_suv_front, 2, 45,  truck, 64.0
+yolov3, bicycle_bike, 1, 5,  bicycle, 100.0
+yolov3, bicycle_bike, 1, 30,  bicycle, 100.0
+yolov3, bicycle_bike, 1, 20,  bicycle, 100.0
+yolov3, bicycle_bike, 1, 40,  bicycle, 100.0
+yolov3, bicycle_bike, 1, 50,  bicycle, 97.0
+yolov3, bicycle_bike, 1, 15,  bicycle, 100.0
+yolov3, bicycle_bike, 1, 35,  bicycle, 100.0
+yolov3, bicycle_bike, 1, 25,  bicycle, 100.0
+yolov3, bicycle_bike, 1, 10,  bicycle, 100.0
+yolov3, bicycle_bike, 1, 45,  bicycle, 99.0
+yolov3, bicycle_bike, 3, 5,  bicycle, 100.0
+yolov3, bicycle_bike, 3, 30,  bicycle, 100.0
+yolov3, bicycle_bike, 3, 20,  bicycle, 100.0
+yolov3, bicycle_bike, 3, 40,  bicycle, 99.0
+yolov3, bicycle_bike, 3, 50,  bicycle, 93.0
+yolov3, bicycle_bike, 3, 15,  bicycle, 100.0
+yolov3, bicycle_bike, 3, 35,  bicycle, 100.0
+yolov3, bicycle_bike, 3, 25,  bicycle, 100.0
+yolov3, bicycle_bike, 3, 10,  bicycle, 100.0
+yolov3, bicycle_bike, 3, 45,  bicycle, 97.0
+yolov3, bicycle_bike, 2_alt, 5,  bicycle, 100.0
+yolov3, bicycle_bike, 2_alt, 30,  bicycle, 100.0
+yolov3, bicycle_bike, 2_alt, 20,  bicycle, 100.0
+yolov3, bicycle_bike, 2_alt, 40,  bicycle, 99.0
+yolov3, bicycle_bike, 2_alt, 50,  bicycle, 95.0
+yolov3, bicycle_bike, 2_alt, 15,  bicycle, 100.0
+yolov3, bicycle_bike, 2_alt, 35,  bicycle, 99.0
+yolov3, bicycle_bike, 2_alt, 25,  bicycle, 100.0
+yolov3, bicycle_bike, 2_alt, 10,  bicycle, 100.0
+yolov3, bicycle_bike, 2_alt, 45,  bicycle, 97.0
+yolov3, bicycle_bike, 2, 5,  bicycle, 97.0
+yolov3, bicycle_bike, 2, 30,  bicycle, 100.0
+yolov3, bicycle_bike, 2, 20,  bicycle, 100.0
+yolov3, bicycle_bike, 2, 40,  bicycle, 99.0
+yolov3, bicycle_bike, 2, 50,  bicycle, 98.0
+yolov3, bicycle_bike, 2, 15,  bicycle, 100.0
+yolov3, bicycle_bike, 2, 35,  bicycle, 100.0
+yolov3, bicycle_bike, 2, 25,  bicycle, 100.0
+yolov3, bicycle_bike, 2, 10,  bicycle, 100.0
+yolov3, bicycle_bike, 2, 45,  bicycle, 94.0
+yolov3, person, 1, 5,  person, 99.0
+yolov3, person, 1, 30,  person, 100.0
+yolov3, person, 1, 20,  person, 100.0
+yolov3, person, 1, 40,  person, 100.0
+yolov3, person, 1, 50,  person, 99.0
+yolov3, person, 1, 15,  person, 100.0
+yolov3, person, 1, 35,  person, 100.0
+yolov3, person, 1, 25,  person, 100.0
+yolov3, person, 1, 10,  person, 100.0
+yolov3, person, 1, 45,  person, 99.0
+yolov3, person, 3, 5,  person, 100.0
+yolov3, person, 3, 30,  person, 100.0
+yolov3, person, 3, 20,  person, 100.0
+yolov3, person, 3, 40,  person, 100.0
+yolov3, person, 3, 50,  person, 99.0
+yolov3, person, 3, 15,  person, 100.0
+yolov3, person, 3, 35,  person, 100.0
+yolov3, person, 3, 25,  person, 100.0
+yolov3, person, 3, 10,  person, 100.0
+yolov3, person, 3, 45,  person, 100.0
+yolov3, person, 2, 5,  person, 100.0
+yolov3, person, 2, 30,  person, 100.0
+yolov3, person, 2, 20,  person, 100.0
+yolov3, person, 2, 40,  person, 100.0
+yolov3, person, 2, 50,  person, 98.0
+yolov3, person, 2, 15,  person, 100.0
+yolov3, person, 2, 35,  person, 100.0
+yolov3, person, 2, 25,  person, 100.0
+yolov3, person, 2, 10,  person, 99.0
+yolov3, person, 2, 45,  person, 99.0
+yolov3, speed_limit_sign, 1, 5,  stop sign, 12.0
+yolov3, speed_limit_sign, 1, 30
+yolov3, speed_limit_sign, 1, 20
+yolov3, speed_limit_sign, 1, 40
+yolov3, speed_limit_sign, 1, 50,  stop sign, 1.0
+yolov3, speed_limit_sign, 1, 15
+yolov3, speed_limit_sign, 1, 35
+yolov3, speed_limit_sign, 1, 25,  stop sign, 2.0
+yolov3, speed_limit_sign, 1, 10
+yolov3, speed_limit_sign, 1, 45
+yolov3, speed_limit_sign, 3, 5,  stop sign, 3.0
+yolov3, speed_limit_sign, 3, 30,  stop sign, 3.0
+yolov3, speed_limit_sign, 3, 20,  stop sign, 1.0
+yolov3, speed_limit_sign, 3, 40
+yolov3, speed_limit_sign, 3, 50
+yolov3, speed_limit_sign, 3, 15,  stop sign, 4.0
+yolov3, speed_limit_sign, 3, 35,  stop sign, 1.0
+yolov3, speed_limit_sign, 3, 25
+yolov3, speed_limit_sign, 3, 10,  stop sign, 4.0
+yolov3, speed_limit_sign, 3, 45
+yolov3, speed_limit_sign, 2, 5
+yolov3, speed_limit_sign, 2, 30,  stop sign, 2.0
+yolov3, speed_limit_sign, 2, 20
+yolov3, speed_limit_sign, 2, 40
+yolov3, speed_limit_sign, 2, 50
+yolov3, speed_limit_sign, 2, 15
+yolov3, speed_limit_sign, 2, 35,  stop sign, 9.0
+yolov3, speed_limit_sign, 2, 25
+yolov3, speed_limit_sign, 2, 10
+yolov3, speed_limit_sign, 2, 45,  stop sign, 2.0
+yolov3, stop_sign, 1, 5,  stop sign, 100.0
+yolov3, stop_sign, 1, 30,  stop sign, 94.0
+yolov3, stop_sign, 1, 20,  stop sign, 97.0
+yolov3, stop_sign, 1, 40,  stop sign, 53.0
+yolov3, stop_sign, 1, 50,  stop sign, 20.0
+yolov3, stop_sign, 1, 15,  stop sign, 100.0
+yolov3, stop_sign, 1, 35,  stop sign, 82.0
+yolov3, stop_sign, 1, 25,  stop sign, 100.0
+yolov3, stop_sign, 1, 10,  stop sign, 100.0
+yolov3, stop_sign, 1, 45,  stop sign, 41.0
+yolov3, stop_sign, 3, 5,  stop sign, 100.0
+yolov3, stop_sign, 3, 30,  stop sign, 98.0
+yolov3, stop_sign, 3, 20,  stop sign, 99.0
+yolov3, stop_sign, 3, 40,  stop sign, 99.0
+yolov3, stop_sign, 3, 50,  stop sign, 97.0
+yolov3, stop_sign, 3, 15,  stop sign, 100.0
+yolov3, stop_sign, 3, 35,  stop sign, 99.0
+yolov3, stop_sign, 3, 25,  stop sign, 100.0
+yolov3, stop_sign, 3, 10,  stop sign, 100.0
+yolov3, stop_sign, 3, 45,  stop sign, 92.0
+yolov3, stop_sign, 2, 5,  stop sign, 100.0
+yolov3, stop_sign, 2, 30,  stop sign, 100.0
+yolov3, stop_sign, 2, 20,  stop sign, 100.0
+yolov3, stop_sign, 2, 40,  stop sign, 99.0
+yolov3, stop_sign, 2, 50,  stop sign, 77.0
+yolov3, stop_sign, 2, 15,  stop sign, 100.0
+yolov3, stop_sign, 2, 35,  stop sign, 99.0
+yolov3, stop_sign, 2, 25,  stop sign, 100.0
+yolov3, stop_sign, 2, 10,  stop sign, 100.0
+yolov3, stop_sign, 2, 45,  stop sign, 97.0
+yolov3, dog, 1, 5,  dog, 100.0
+yolov3, dog, 1, 30,  dog, 11.0
+yolov3, dog, 1, 20,  dog, 99.0
+yolov3, dog, 1, 40,  dog, 10.0
+yolov3, dog, 1, 50
+yolov3, dog, 1, 15,  dog, 100.0
+yolov3, dog, 1, 35,  dog, 8.0
+yolov3, dog, 1, 25,  dog, 84.0
+yolov3, dog, 1, 10,  dog, 100.0
+yolov3, dog, 1, 45
+yolov3, dog, 3, 5,  dog, 100.0
+yolov3, dog, 3, 30
+yolov3, dog, 3, 20,  dog, 24.0
+yolov3, dog, 3, 40
+yolov3, dog, 3, 50
+yolov3, dog, 3, 15,  dog, 78.0
+yolov3, dog, 3, 35
+yolov3, dog, 3, 25,  dog, 4.0
+yolov3, dog, 3, 10,  dog, 99.0
+yolov3, dog, 3, 45
+yolov3, dog, 2, 5,  dog, 99.0
+yolov3, dog, 2, 30,  dog, 14.0
+yolov3, dog, 2, 20,  dog, 20.0
+yolov3, dog, 2, 40,  dog, 19.0
+yolov3, dog, 2, 50
+yolov3, dog, 2, 15,  dog, 71.0
+yolov3, dog, 2, 35,  dog, 25.0
+yolov3, dog, 2, 25,  dog, 6.0
+yolov3, dog, 2, 10,  dog, 99.0
+yolov3, dog, 2, 45,  dog, 12.0
+yolov3, car_truck_suv_side, 1, 5,  truck, 94.0
+yolov3, car_truck_suv_side, 1, 30,  car, 100.0
+yolov3, car_truck_suv_side, 1, 20,  car, 100.0
+yolov3, car_truck_suv_side, 1, 40,  car, 99.0
+yolov3, car_truck_suv_side, 1, 50,  car, 100.0
+yolov3, car_truck_suv_side, 1, 15,  car, 95.0
+yolov3, car_truck_suv_side, 1, 35,  car, 99.0
+yolov3, car_truck_suv_side, 1, 25,  car, 99.0
+yolov3, car_truck_suv_side, 1, 10,  truck, 100.0
+yolov3, car_truck_suv_side, 1, 45,  car, 99.0
+yolov3, car_truck_suv_side, 3, 5,  car, 90.0
+yolov3, car_truck_suv_side, 3, 30,  truck, 100.0
+yolov3, car_truck_suv_side, 3, 20,  truck, 100.0
+yolov3, car_truck_suv_side, 3, 40,  truck, 99.0
+yolov3, car_truck_suv_side, 3, 50,  truck, 100.0
+yolov3, car_truck_suv_side, 3, 15,  truck, 100.0
+yolov3, car_truck_suv_side, 3, 35,  truck, 100.0
+yolov3, car_truck_suv_side, 3, 25,  truck, 100.0
+yolov3, car_truck_suv_side, 3, 10,  truck, 100.0
+yolov3, car_truck_suv_side, 3, 45,  truck, 100.0
+yolov3, car_truck_suv_side, 2, 5,  car, 100.0
+yolov3, car_truck_suv_side, 2, 30,  truck, 99.0
+yolov3, car_truck_suv_side, 2, 20,  truck, 99.0
+yolov3, car_truck_suv_side, 2, 40,  truck, 94.0
+yolov3, car_truck_suv_side, 2, 50,  truck, 99.0
+yolov3, car_truck_suv_side, 2, 15,  truck, 99.0
+yolov3, car_truck_suv_side, 2, 35,  truck, 98.0
+yolov3, car_truck_suv_side, 2, 25,  truck, 99.0
+yolov3, car_truck_suv_side, 2, 10,  car, 94.0
+yolov3, car_truck_suv_side, 2, 45,  truck, 96.0
+yolov3, street_sign, 1, 5
+yolov3, street_sign, 1, 30,  stop sign, 1.0
+yolov3, street_sign, 1, 20
+yolov3, street_sign, 1, 40
+yolov3, street_sign, 1, 50
+yolov3, street_sign, 1, 15
+yolov3, street_sign, 1, 35
+yolov3, street_sign, 1, 25
+yolov3, street_sign, 1, 10
+yolov3, street_sign, 1, 45
+yolov3, street_sign, 3, 5
+yolov3, street_sign, 3, 30
+yolov3, street_sign, 3, 20,  stop sign, 38.0
+yolov3, street_sign, 3, 40
+yolov3, street_sign, 3, 50
+yolov3, street_sign, 3, 15,  stop sign, 13.0
+yolov3, street_sign, 3, 35
+yolov3, street_sign, 3, 25,  stop sign, 46.0
+yolov3, street_sign, 3, 10,  stop sign, 73.0
+yolov3, street_sign, 3, 45
+yolov3, street_sign, 2, 5
+yolov3, street_sign, 2, 30
+yolov3, street_sign, 2, 20
+yolov3, street_sign, 2, 40
+yolov3, street_sign, 2, 50
+yolov3, street_sign, 2, 15
+yolov3, street_sign, 2, 35,  stop sign, 2.0
+yolov3, street_sign, 2, 25
+yolov3, street_sign, 2, 10
+yolov3, street_sign, 2, 45

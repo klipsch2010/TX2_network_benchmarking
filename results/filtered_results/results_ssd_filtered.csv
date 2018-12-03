@@ -1,0 +1,250 @@
+ssd, car_truck_suv_front, 1, 5,  car, 99.9580442905
+ssd, car_truck_suv_front, 1, 30,  car, 99.1422951221
+ssd, car_truck_suv_front, 1, 20,  car, 99.8023867607
+ssd, car_truck_suv_front, 1, 40,  car, 94.5262253284
+ssd, car_truck_suv_front, 1, 50
+ssd, car_truck_suv_front, 1, 15,  car, 99.981623888
+ssd, car_truck_suv_front, 1, 35,  car, 99.1423666477
+ssd, car_truck_suv_front, 1, 25,  car, 97.2631812096
+ssd, car_truck_suv_front, 1, 10,  car, 99.984562397
+ssd, car_truck_suv_front, 1, 45,  car, 95.0861215591
+ssd, car_truck_suv_front, 3, 5,  car, 99.9355614185
+ssd, car_truck_suv_front, 3, 30,  car, 99.3079721928
+ssd, car_truck_suv_front, 3, 20,  car, 99.6649682522
+ssd, car_truck_suv_front, 3, 40,  car, 99.3629395962
+ssd, car_truck_suv_front, 3, 50,  car, 97.1679031849
+ssd, car_truck_suv_front, 3, 15,  car, 98.2038140297
+ssd, car_truck_suv_front, 3, 35,  car, 99.3441104889
+ssd, car_truck_suv_front, 3, 25,  car, 99.8694002628
+ssd, car_truck_suv_front, 3, 10,  car, 94.4113075733
+ssd, car_truck_suv_front, 3, 45,  car, 94.5689022541
+ssd, car_truck_suv_front, 2, 5,  car, 99.9679207802
+ssd, car_truck_suv_front, 2, 30,  car, 98.2915043831
+ssd, car_truck_suv_front, 2, 20,  car, 99.9084830284
+ssd, car_truck_suv_front, 2, 40,  car, 99.339056015
+ssd, car_truck_suv_front, 2, 50,  car, 98.0661511421
+ssd, car_truck_suv_front, 2, 15,  car, 99.9863862991
+ssd, car_truck_suv_front, 2, 35,  car, 99.5364785194
+ssd, car_truck_suv_front, 2, 25,  car, 99.5873391628
+ssd, car_truck_suv_front, 2, 10,  car, 99.9929070473
+ssd, car_truck_suv_front, 2, 45,  car, 98.6608564854
+ssd, bicycle_bike, 1, 5,  bicycle, 99.9383926392
+ssd, bicycle_bike, 1, 30,  bicycle, 88.763409853
+ssd, bicycle_bike, 1, 20,  bicycle, 99.8502492905
+ssd, bicycle_bike, 1, 40,  bicycle, 68.9731121063
+ssd, bicycle_bike, 1, 50
+ssd, bicycle_bike, 1, 15,  bicycle, 99.9711811543
+ssd, bicycle_bike, 1, 35,  bicycle, 82.5258910656
+ssd, bicycle_bike, 1, 25,  bicycle, 83.4180772305
+ssd, bicycle_bike, 1, 10,  bicycle, 99.9830245972
+ssd, bicycle_bike, 1, 45
+ssd, bicycle_bike, 3, 5,  bicycle, 99.9810039997
+ssd, bicycle_bike, 3, 30,  bicycle, 68.5241878033
+ssd, bicycle_bike, 3, 20,  bicycle, 97.92547822
+ssd, bicycle_bike, 3, 40
+ssd, bicycle_bike, 3, 50
+ssd, bicycle_bike, 3, 15,  bicycle, 99.2654085159
+ssd, bicycle_bike, 3, 35
+ssd, bicycle_bike, 3, 25,  bicycle, 56.5547943115
+ssd, bicycle_bike, 3, 10,  bicycle, 99.9728620052
+ssd, bicycle_bike, 3, 45
+ssd, bicycle_bike, 2_alt, 5,  bicycle, 99.916768074
+ssd, bicycle_bike, 2_alt, 30,  bicycle, 86.1331939697
+ssd, bicycle_bike, 2_alt, 20,  bicycle, 84.2219591141
+ssd, bicycle_bike, 2_alt, 40,  bicycle, 74.6551036835
+ssd, bicycle_bike, 2_alt, 50
+ssd, bicycle_bike, 2_alt, 15,  bicycle, 99.9788105488
+ssd, bicycle_bike, 2_alt, 35,  bicycle, 57.0827484131
+ssd, bicycle_bike, 2_alt, 25,  bicycle, 95.4810500145
+ssd, bicycle_bike, 2_alt, 10,  bicycle, 99.9047219753
+ssd, bicycle_bike, 2_alt, 45
+ssd, bicycle_bike, 2, 5,  bicycle, 99.9831318855
+ssd, bicycle_bike, 2, 30,  bicycle, 82.7363848686
+ssd, bicycle_bike, 2, 20,  bicycle, 75.8410394192
+ssd, bicycle_bike, 2, 40,  bicycle, 70.9078729153
+ssd, bicycle_bike, 2, 50
+ssd, bicycle_bike, 2, 15,  bicycle, 99.9548256397
+ssd, bicycle_bike, 2, 35,  bicycle, 75.226944685
+ssd, bicycle_bike, 2, 25,  bicycle, 93.4283971786
+ssd, bicycle_bike, 2, 10,  bicycle, 99.9672889709
+ssd, bicycle_bike, 2, 45
+ssd, person, 1, 5,  person, 99.9630093575
+ssd, person, 1, 30
+ssd, person, 1, 20,  person, 59.6418380737
+ssd, person, 1, 40
+ssd, person, 1, 50
+ssd, person, 1, 15,  person, 68.932056427
+ssd, person, 1, 35,  person, 59.6115767956
+ssd, person, 1, 25,  person, 64.953994751
+ssd, person, 1, 10,  person, 97.430562973
+ssd, person, 1, 45
+ssd, person, 3, 5,  person, 96.5549170971
+ssd, person, 3, 30
+ssd, person, 3, 20
+ssd, person, 3, 40
+ssd, person, 3, 50
+ssd, person, 3, 15,  person, 98.5443234444
+ssd, person, 3, 35
+ssd, person, 3, 25
+ssd, person, 3, 10,  person, 76.0647058487
+ssd, person, 3, 45
+ssd, person, 2, 5,  person, 99.8156368732
+ssd, person, 2, 30,  person, 56.4004898071
+ssd, person, 2, 20,  person, 81.0554981232
+ssd, person, 2, 40,  person, 80.0443887711
+ssd, person, 2, 50,  person, 57.4189782143
+ssd, person, 2, 15,  person, 99.9040305614
+ssd, person, 2, 35
+ssd, person, 2, 25
+ssd, person, 2, 10,  person, 70.1860904694
+ssd, person, 2, 45,  person, 59.4128012657
+ssd, speed_limit_sign, 1, 5
+ssd, speed_limit_sign, 1, 30
+ssd, speed_limit_sign, 1, 20
+ssd, speed_limit_sign, 1, 40
+ssd, speed_limit_sign, 1, 50
+ssd, speed_limit_sign, 1, 15
+ssd, speed_limit_sign, 1, 35
+ssd, speed_limit_sign, 1, 25
+ssd, speed_limit_sign, 1, 10
+ssd, speed_limit_sign, 1, 45
+ssd, speed_limit_sign, 3, 5
+ssd, speed_limit_sign, 3, 30
+ssd, speed_limit_sign, 3, 20
+ssd, speed_limit_sign, 3, 40
+ssd, speed_limit_sign, 3, 50
+ssd, speed_limit_sign, 3, 15
+ssd, speed_limit_sign, 3, 35
+ssd, speed_limit_sign, 3, 25
+ssd, speed_limit_sign, 3, 10
+ssd, speed_limit_sign, 3, 45
+ssd, speed_limit_sign, 2, 5
+ssd, speed_limit_sign, 2, 30
+ssd, speed_limit_sign, 2, 20
+ssd, speed_limit_sign, 2, 40
+ssd, speed_limit_sign, 2, 50
+ssd, speed_limit_sign, 2, 15
+ssd, speed_limit_sign, 2, 35
+ssd, speed_limit_sign, 2, 25
+ssd, speed_limit_sign, 2, 10
+ssd, speed_limit_sign, 2, 45
+ssd, stop_sign, 1, 5
+ssd, stop_sign, 1, 30
+ssd, stop_sign, 1, 20
+ssd, stop_sign, 1, 40
+ssd, stop_sign, 1, 50
+ssd, stop_sign, 1, 15
+ssd, stop_sign, 1, 35
+ssd, stop_sign, 1, 25
+ssd, stop_sign, 1, 10
+ssd, stop_sign, 1, 45
+ssd, stop_sign, 3, 5
+ssd, stop_sign, 3, 30
+ssd, stop_sign, 3, 20
+ssd, stop_sign, 3, 40
+ssd, stop_sign, 3, 50
+ssd, stop_sign, 3, 15
+ssd, stop_sign, 3, 35
+ssd, stop_sign, 3, 25
+ssd, stop_sign, 3, 10
+ssd, stop_sign, 3, 45
+ssd, stop_sign, 2, 5
+ssd, stop_sign, 2, 30
+ssd, stop_sign, 2, 20
+ssd, stop_sign, 2, 40
+ssd, stop_sign, 2, 50
+ssd, stop_sign, 2, 15
+ssd, stop_sign, 2, 35
+ssd, stop_sign, 2, 25
+ssd, stop_sign, 2, 10
+ssd, stop_sign, 2, 45
+ssd, dog, 1, 5,  dog, 98.5462903976
+ssd, dog, 1, 30
+ssd, dog, 1, 20
+ssd, dog, 1, 40
+ssd, dog, 1, 50
+ssd, dog, 1, 15,  dog, 84.7648799419
+ssd, dog, 1, 35
+ssd, dog, 1, 25
+ssd, dog, 1, 10,  dog, 92.6416635513
+ssd, dog, 1, 45
+ssd, dog, 3, 5,  dog, 62.0832562447
+ssd, dog, 3, 30
+ssd, dog, 3, 20
+ssd, dog, 3, 40
+ssd, dog, 3, 50
+ssd, dog, 3, 15
+ssd, dog, 3, 35
+ssd, dog, 3, 25
+ssd, dog, 3, 10
+ssd, dog, 3, 45
+ssd, dog, 2, 5,  dog, 99.1047680378
+ssd, dog, 2, 30
+ssd, dog, 2, 20
+ssd, dog, 2, 40
+ssd, dog, 2, 50
+ssd, dog, 2, 15
+ssd, dog, 2, 35
+ssd, dog, 2, 25
+ssd, dog, 2, 10
+ssd, dog, 2, 45
+ssd, car_truck_suv_side, 1, 5,  car, 99.9834299088
+ssd, car_truck_suv_side, 1, 30,  car, 99.9889612198
+ssd, car_truck_suv_side, 1, 20,  car, 99.9538064003
+ssd, car_truck_suv_side, 1, 40,  car, 99.9711930752
+ssd, car_truck_suv_side, 1, 50,  car, 94.728064537
+ssd, car_truck_suv_side, 1, 15,  car, 99.9711096287
+ssd, car_truck_suv_side, 1, 35,  car, 99.9986052513
+ssd, car_truck_suv_side, 1, 25,  car, 99.998497963
+ssd, car_truck_suv_side, 1, 10,  car, 99.8740255833
+ssd, car_truck_suv_side, 1, 45,  car, 99.5523810387
+ssd, car_truck_suv_side, 3, 5,  car, 99.732363224
+ssd, car_truck_suv_side, 3, 30,  car, 99.840503931
+ssd, car_truck_suv_side, 3, 20,  car, 99.9345839024
+ssd, car_truck_suv_side, 3, 40,  car, 96.7243492603
+ssd, car_truck_suv_side, 3, 50,  car, 98.7335503101
+ssd, car_truck_suv_side, 3, 15,  car, 99.8006045818
+ssd, car_truck_suv_side, 3, 35,  car, 94.5086121559
+ssd, car_truck_suv_side, 3, 25,  car, 99.9235153198
+ssd, car_truck_suv_side, 3, 10,  car, 99.7500836849
+ssd, car_truck_suv_side, 3, 45,  car, 99.9114215374
+ssd, car_truck_suv_side, 2, 5,  car, 99.9844431877
+ssd, car_truck_suv_side, 2, 30,  car, 98.9240944386
+ssd, car_truck_suv_side, 2, 20,  car, 99.9892830849
+ssd, car_truck_suv_side, 2, 40,  car, 99.9697566032
+ssd, car_truck_suv_side, 2, 50,  car, 99.905449152
+ssd, car_truck_suv_side, 2, 15,  car, 99.9466359615
+ssd, car_truck_suv_side, 2, 35,  car, 99.9976277351
+ssd, car_truck_suv_side, 2, 25,  car, 99.9752223492
+ssd, car_truck_suv_side, 2, 10,  car, 99.822562933
+ssd, car_truck_suv_side, 2, 45,  car, 99.8371064663
+ssd, street_sign, 1, 5
+ssd, street_sign, 1, 30
+ssd, street_sign, 1, 20
+ssd, street_sign, 1, 40
+ssd, street_sign, 1, 50
+ssd, street_sign, 1, 15
+ssd, street_sign, 1, 35
+ssd, street_sign, 1, 25
+ssd, street_sign, 1, 10
+ssd, street_sign, 1, 45
+ssd, street_sign, 3, 5
+ssd, street_sign, 3, 30
+ssd, street_sign, 3, 20
+ssd, street_sign, 3, 40
+ssd, street_sign, 3, 50
+ssd, street_sign, 3, 15
+ssd, street_sign, 3, 35
+ssd, street_sign, 3, 25
+ssd, street_sign, 3, 10
+ssd, street_sign, 3, 45
+ssd, street_sign, 2, 5
+ssd, street_sign, 2, 30
+ssd, street_sign, 2, 20
+ssd, street_sign, 2, 40
+ssd, street_sign, 2, 50
+ssd, street_sign, 2, 15
+ssd, street_sign, 2, 35
+ssd, street_sign, 2, 25
+ssd, street_sign, 2, 10
+ssd, street_sign, 2, 45

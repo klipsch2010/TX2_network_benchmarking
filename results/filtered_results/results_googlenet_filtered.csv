@@ -1,0 +1,250 @@
+googlenet, car_truck_suv_front, 1, 5,  minivan - car, 65.0
+googlenet, car_truck_suv_front, 1, 30,  mobile home- manufactured home - car, 76.0
+googlenet, car_truck_suv_front, 1, 20,  streetcar- tram- tramcar- trolley- trolley car, 46.0
+googlenet, car_truck_suv_front, 1, 40,  mobile home- manufactured home - car, 48.0
+googlenet, car_truck_suv_front, 1, 50,  mobile home- manufactured home - car, 65.0
+googlenet, car_truck_suv_front, 1, 15,  garbage truck- dustcart - car, 31.0
+googlenet, car_truck_suv_front, 1, 35,  mobile home- manufactured home - car, 71.0
+googlenet, car_truck_suv_front, 1, 25,  mobile home- manufactured home - car, 71.0
+googlenet, car_truck_suv_front, 1, 10,  recreational vehicle- RV- R.V. - car, 47.0
+googlenet, car_truck_suv_front, 1, 45,  mobile home- manufactured home - car, 12.0
+googlenet, car_truck_suv_front, 3, 5,  minivan - car, 25.0
+googlenet, car_truck_suv_front, 3, 30,  mobile home- manufactured home - car, 90.0
+googlenet, car_truck_suv_front, 3, 20,  mobile home- manufactured home - car, 76.0
+googlenet, car_truck_suv_front, 3, 40,  mobile home- manufactured home - car, 86.0
+googlenet, car_truck_suv_front, 3, 50,  mobile home- manufactured home - car, 96.0
+googlenet, car_truck_suv_front, 3, 15,  mobile home- manufactured home - car, 60.0
+googlenet, car_truck_suv_front, 3, 35,  mobile home- manufactured home - car, 87.0
+googlenet, car_truck_suv_front, 3, 25,  mobile home- manufactured home - car, 89.0
+googlenet, car_truck_suv_front, 3, 10,  recreational vehicle- RV- R.V. - car, 33.0
+googlenet, car_truck_suv_front, 3, 45,  mobile home- manufactured home - car, 89.0
+googlenet, car_truck_suv_front, 2, 5,  beach wagon- station wagon- wagon- estate car- beach waggon- station waggon- waggon, 14.0
+googlenet, car_truck_suv_front, 2, 30,  mobile home- manufactured home - car, 72.0
+googlenet, car_truck_suv_front, 2, 20,  mobile home- manufactured home - car, 40.0
+googlenet, car_truck_suv_front, 2, 40,  mobile home- manufactured home - car, 78.0
+googlenet, car_truck_suv_front, 2, 50,  mobile home- manufactured home - car, 39.0
+googlenet, car_truck_suv_front, 2, 15,  recreational vehicle- RV- R.V. - car, 64.0
+googlenet, car_truck_suv_front, 2, 35,  mobile home- manufactured home - car, 81.0
+googlenet, car_truck_suv_front, 2, 25,  mobile home- manufactured home - car, 54.0
+googlenet, car_truck_suv_front, 2, 10,  recreational vehicle- RV- R.V. - car, 28.0
+googlenet, car_truck_suv_front, 2, 45,  mobile home- manufactured home - car, 73.0
+googlenet, bicycle_bike, 1, 5,  mountain bike- all-terrain bike- off-roader - bicycle, 65.0
+googlenet, bicycle_bike, 1, 30
+googlenet, bicycle_bike, 1, 20
+googlenet, bicycle_bike, 1, 40
+googlenet, bicycle_bike, 1, 50
+googlenet, bicycle_bike, 1, 15,  bicycle-built-for-two- tandem bicycle- tandem, 3.0
+googlenet, bicycle_bike, 1, 35
+googlenet, bicycle_bike, 1, 25
+googlenet, bicycle_bike, 1, 10,  bicycle-built-for-two- tandem bicycle- tandem, 13.0
+googlenet, bicycle_bike, 1, 45
+googlenet, bicycle_bike, 3, 5,  bicycle-built-for-two- tandem bicycle- tandem, 5.0
+googlenet, bicycle_bike, 3, 30
+googlenet, bicycle_bike, 3, 20
+googlenet, bicycle_bike, 3, 40
+googlenet, bicycle_bike, 3, 50
+googlenet, bicycle_bike, 3, 15
+googlenet, bicycle_bike, 3, 35
+googlenet, bicycle_bike, 3, 25
+googlenet, bicycle_bike, 3, 10,  bicycle-built-for-two- tandem bicycle- tandem, 2.0
+googlenet, bicycle_bike, 3, 45
+googlenet, bicycle_bike, 2_alt, 5,  mountain bike- all-terrain bike- off-roader - bicycle, 86.0
+googlenet, bicycle_bike, 2_alt, 30
+googlenet, bicycle_bike, 2_alt, 20,  bicycle-built-for-two- tandem bicycle- tandem, 4.0
+googlenet, bicycle_bike, 2_alt, 40
+googlenet, bicycle_bike, 2_alt, 50
+googlenet, bicycle_bike, 2_alt, 15
+googlenet, bicycle_bike, 2_alt, 35
+googlenet, bicycle_bike, 2_alt, 25
+googlenet, bicycle_bike, 2_alt, 10
+googlenet, bicycle_bike, 2_alt, 45
+googlenet, bicycle_bike, 2, 5,  mountain bike- all-terrain bike- off-roader - bicycle, 75.0
+googlenet, bicycle_bike, 2, 30
+googlenet, bicycle_bike, 2, 20
+googlenet, bicycle_bike, 2, 40
+googlenet, bicycle_bike, 2, 50
+googlenet, bicycle_bike, 2, 15
+googlenet, bicycle_bike, 2, 35
+googlenet, bicycle_bike, 2, 25,  bicycle-built-for-two- tandem bicycle- tandem, 1.0
+googlenet, bicycle_bike, 2, 10,  mountain bike- all-terrain bike- off-roader - bicycle, 5.0
+googlenet, bicycle_bike, 2, 45
+googlenet, person, 1, 5
+googlenet, person, 1, 30
+googlenet, person, 1, 20
+googlenet, person, 1, 40
+googlenet, person, 1, 50
+googlenet, person, 1, 15
+googlenet, person, 1, 35
+googlenet, person, 1, 25
+googlenet, person, 1, 10
+googlenet, person, 1, 45
+googlenet, person, 3, 5
+googlenet, person, 3, 30
+googlenet, person, 3, 20
+googlenet, person, 3, 40
+googlenet, person, 3, 50
+googlenet, person, 3, 15
+googlenet, person, 3, 35
+googlenet, person, 3, 25
+googlenet, person, 3, 10
+googlenet, person, 3, 45
+googlenet, person, 2, 5
+googlenet, person, 2, 30
+googlenet, person, 2, 20
+googlenet, person, 2, 40
+googlenet, person, 2, 50
+googlenet, person, 2, 15
+googlenet, person, 2, 35
+googlenet, person, 2, 25
+googlenet, person, 2, 10
+googlenet, person, 2, 45
+googlenet, speed_limit_sign, 1, 5,  street sign, 96.0
+googlenet, speed_limit_sign, 1, 30,  traffic light- traffic signal- stoplight, 4.0
+googlenet, speed_limit_sign, 1, 20,  traffic light- traffic signal- stoplight, 7.0
+googlenet, speed_limit_sign, 1, 40
+googlenet, speed_limit_sign, 1, 50
+googlenet, speed_limit_sign, 1, 15,  street sign, 31.0
+googlenet, speed_limit_sign, 1, 35
+googlenet, speed_limit_sign, 1, 25
+googlenet, speed_limit_sign, 1, 10,  street sign, 79.0
+googlenet, speed_limit_sign, 1, 45
+googlenet, speed_limit_sign, 3, 5,  street sign, 91.0
+googlenet, speed_limit_sign, 3, 30,  street sign, 2.0
+googlenet, speed_limit_sign, 3, 20,  street sign, 3.0
+googlenet, speed_limit_sign, 3, 40
+googlenet, speed_limit_sign, 3, 50
+googlenet, speed_limit_sign, 3, 15,  street sign, 55.0
+googlenet, speed_limit_sign, 3, 35
+googlenet, speed_limit_sign, 3, 25,  street sign, 5.0
+googlenet, speed_limit_sign, 3, 10,  street sign, 88.0
+googlenet, speed_limit_sign, 3, 45
+googlenet, speed_limit_sign, 2, 5,  street sign, 97.0
+googlenet, speed_limit_sign, 2, 30
+googlenet, speed_limit_sign, 2, 20,  street sign, 6.0
+googlenet, speed_limit_sign, 2, 40
+googlenet, speed_limit_sign, 2, 50
+googlenet, speed_limit_sign, 2, 15,  street sign, 38.0
+googlenet, speed_limit_sign, 2, 35
+googlenet, speed_limit_sign, 2, 25
+googlenet, speed_limit_sign, 2, 10,  street sign, 73.0
+googlenet, speed_limit_sign, 2, 45
+googlenet, stop_sign, 1, 5,  street sign, 59.0
+googlenet, stop_sign, 1, 30,  traffic light- traffic signal- stoplight, 5.0
+googlenet, stop_sign, 1, 20
+googlenet, stop_sign, 1, 40,  traffic light- traffic signal- stoplight, 8.0
+googlenet, stop_sign, 1, 50,  traffic light- traffic signal- stoplight, 7.0
+googlenet, stop_sign, 1, 15,  traffic light- traffic signal- stoplight, 7.0
+googlenet, stop_sign, 1, 35
+googlenet, stop_sign, 1, 25,  traffic light- traffic signal- stoplight, 35.0
+googlenet, stop_sign, 1, 10,  street sign, 15.0
+googlenet, stop_sign, 1, 45,  traffic light- traffic signal- stoplight, 9.0
+googlenet, stop_sign, 3, 5,  street sign, 18.0
+googlenet, stop_sign, 3, 30
+googlenet, stop_sign, 3, 20
+googlenet, stop_sign, 3, 40,  traffic light- traffic signal- stoplight, 1.0
+googlenet, stop_sign, 3, 50
+googlenet, stop_sign, 3, 15
+googlenet, stop_sign, 3, 35
+googlenet, stop_sign, 3, 25
+googlenet, stop_sign, 3, 10,  street sign, 3.0
+googlenet, stop_sign, 3, 45
+googlenet, stop_sign, 2, 5,  street sign, 63.0
+googlenet, stop_sign, 2, 30
+googlenet, stop_sign, 2, 20
+googlenet, stop_sign, 2, 40
+googlenet, stop_sign, 2, 50
+googlenet, stop_sign, 2, 15
+googlenet, stop_sign, 2, 35
+googlenet, stop_sign, 2, 25
+googlenet, stop_sign, 2, 10
+googlenet, stop_sign, 2, 45
+googlenet, dog, 1, 5,  pug- pug-dog, 26.0
+googlenet, dog, 1, 30
+googlenet, dog, 1, 20
+googlenet, dog, 1, 40
+googlenet, dog, 1, 50
+googlenet, dog, 1, 15
+googlenet, dog, 1, 35
+googlenet, dog, 1, 25
+googlenet, dog, 1, 10
+googlenet, dog, 1, 45
+googlenet, dog, 3, 5,  West Highland white terrier- dog, 11.0
+googlenet, dog, 3, 30
+googlenet, dog, 3, 20
+googlenet, dog, 3, 40
+googlenet, dog, 3, 50
+googlenet, dog, 3, 15
+googlenet, dog, 3, 35
+googlenet, dog, 3, 25
+googlenet, dog, 3, 10
+googlenet, dog, 3, 45
+googlenet, dog, 2, 5,  English springer- English springer spaniel- dog, 76.0
+googlenet, dog, 2, 30
+googlenet, dog, 2, 20
+googlenet, dog, 2, 40
+googlenet, dog, 2, 50
+googlenet, dog, 2, 15
+googlenet, dog, 2, 35
+googlenet, dog, 2, 25
+googlenet, dog, 2, 10
+googlenet, dog, 2, 45
+googlenet, car_truck_suv_side, 1, 5,  minivan - car, 74.0
+googlenet, car_truck_suv_side, 1, 30,  minivan - car, 28.0
+googlenet, car_truck_suv_side, 1, 20,  beach wagon- station wagon- wagon- estate car- beach waggon- station waggon- waggon, 40.0
+googlenet, car_truck_suv_side, 1, 40,  minivan - car, 39.0
+googlenet, car_truck_suv_side, 1, 50,  mobile home- manufactured home - car, 27.0
+googlenet, car_truck_suv_side, 1, 15,  beach wagon- station wagon- wagon- estate car- beach waggon- station waggon- waggon, 58.0
+googlenet, car_truck_suv_side, 1, 35,  recreational vehicle- RV- R.V. - car, 57.0
+googlenet, car_truck_suv_side, 1, 25,  minivan - car, 47.0
+googlenet, car_truck_suv_side, 1, 10,  beach wagon- station wagon- wagon- estate car- beach waggon- station waggon- waggon, 56.0
+googlenet, car_truck_suv_side, 1, 45,  mobile home- manufactured home - car, 27.0
+googlenet, car_truck_suv_side, 3, 5,  jeep- landrover - car, 41.0
+googlenet, car_truck_suv_side, 3, 30,  jeep- landrover - car, 21.0
+googlenet, car_truck_suv_side, 3, 20,  jeep- landrover - car, 30.0
+googlenet, car_truck_suv_side, 3, 40,  mobile home- manufactured home - car, 8.0
+googlenet, car_truck_suv_side, 3, 50,  garbage truck- dustcart - car, 3.0
+googlenet, car_truck_suv_side, 3, 15,  pickup- pickup truck - car, 64.0
+googlenet, car_truck_suv_side, 3, 35,  tow truck- tow car- wrecker - car, 9.0
+googlenet, car_truck_suv_side, 3, 25,  jeep- landrover - car, 14.0
+googlenet, car_truck_suv_side, 3, 10,  pickup- pickup truck - car, 73.0
+googlenet, car_truck_suv_side, 3, 45,  lakeside- lakeshore, 11.0
+googlenet, car_truck_suv_side, 2, 5,  limousine- limo - car, 98.0
+googlenet, car_truck_suv_side, 2, 30,  minivan - car, 41.0
+googlenet, car_truck_suv_side, 2, 20,  pickup- pickup truck - car, 36.0
+googlenet, car_truck_suv_side, 2, 40,  minivan - car, 35.0
+googlenet, car_truck_suv_side, 2, 50,  recreational vehicle- RV- R.V. - car, 30.0
+googlenet, car_truck_suv_side, 2, 15,  pickup- pickup truck - car, 82.0
+googlenet, car_truck_suv_side, 2, 35,  minivan - car, 24.0
+googlenet, car_truck_suv_side, 2, 25,  tow truck- tow car- wrecker - car, 39.0
+googlenet, car_truck_suv_side, 2, 10,  pickup- pickup truck - car, 64.0
+googlenet, car_truck_suv_side, 2, 45,  minivan - car, 28.0
+googlenet, street_sign, 1, 5,  street sign, 82.0
+googlenet, street_sign, 1, 30,  traffic light- traffic signal- stoplight, 4.0
+googlenet, street_sign, 1, 20
+googlenet, street_sign, 1, 40,  street sign, 3.0
+googlenet, street_sign, 1, 50,  traffic light- traffic signal- stoplight, 4.0
+googlenet, street_sign, 1, 15,  street sign, 21.0
+googlenet, street_sign, 1, 35,  street sign, 2.0
+googlenet, street_sign, 1, 25,  traffic light- traffic signal- stoplight, 3.0
+googlenet, street_sign, 1, 10,  street sign, 94.0
+googlenet, street_sign, 1, 45,  traffic light- traffic signal- stoplight, 11.0
+googlenet, street_sign, 3, 5,  street sign, 99.0
+googlenet, street_sign, 3, 30,  traffic light- traffic signal- stoplight, 3.0
+googlenet, street_sign, 3, 20,  street sign, 11.0
+googlenet, street_sign, 3, 40,  street sign, 1.0
+googlenet, street_sign, 3, 50
+googlenet, street_sign, 3, 15,  street sign, 11.0
+googlenet, street_sign, 3, 35,  traffic light- traffic signal- stoplight, 6.0
+googlenet, street_sign, 3, 25,  street sign, 1.0
+googlenet, street_sign, 3, 10,  street sign, 20.0
+googlenet, street_sign, 3, 45
+googlenet, street_sign, 2, 5,  street sign, 52.0
+googlenet, street_sign, 2, 30,  street sign, 2.0
+googlenet, street_sign, 2, 20,  street sign, 4.0
+googlenet, street_sign, 2, 40
+googlenet, street_sign, 2, 50,  street sign, 2.0
+googlenet, street_sign, 2, 15,  street sign, 28.0
+googlenet, street_sign, 2, 35,  street sign, 5.0
+googlenet, street_sign, 2, 25
+googlenet, street_sign, 2, 10,  street sign, 57.0
+googlenet, street_sign, 2, 45,  street sign, 6.0

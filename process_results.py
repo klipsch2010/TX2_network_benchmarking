@@ -29,59 +29,77 @@ class Vividict(dict):
 # Read the input CSV file and filter the data to only use the best detections 
 # from the targetted type. 
 ##############################################################################
-def read_csv(file_path, confidence_threshold, removed_text):
+def read_csv(file_path, confidence_threshold, removed_text, filtered_path):
+        # condition filtered results path and create file if it doesn't exist
+	path_split         = file_path.split(".txt")
+	path_split2        = path_split[0].split("/")
+	path_split3        = path_split2[-1].split("_")
+	current_network    = path_split3[-1]
+	filtered_name      = path_split2[-1] + "_filtered.csv"
+        filtered_full_path = filtered_path   + "/" + filtered_name
+	if not os.path.exists(filtered_path):
+	    os.makedirs(filtered_path)
 
-    with open(file_path, 'rb') as csvfile:
-        # Final formatting
-        formatted_detection = []
+	with open(filtered_full_path, "w") as filteredfile:
 
-        image_results = csv.reader(csvfile, delimiter=',', quotechar='|')
+	    with open(file_path, 'rb') as csvfile:
+		# Final formatting
+		formatted_detection = []
 
-        for row in image_results:
-            #condition the text file
-            rm_text = row[0]
-            image_name0 = rm_text.split(removed_text)
-            image_name1 = image_name0[-1].replace('.jpg','')
-            #split the image characteristics into lists
-            image_name_list = image_name1.split("/")
-            #get the individual words from the image type to compare to detection labels
-            image_name_words = image_name_list[0].split('_')
-            
-            #format the found list
-            found_list = []
-            found_list.append(image_name_list[0])
-            # combine image name and image number
-            found_list.append(image_name_list[0] + "_" + image_name_list[1]);
-            #found_list.append(int(image_name_list[2]))
-            #for i in range(3 ,len(image_name_list)):
-            #    found_list.append(image_name_list[i])
-            found_list.append(int(image_name_list[2]))
-            for i in range(3 ,len(image_name_list)):
-                found_list.append(image_name_list[i])
-            # Add the detection fillers
-            found_list.append("")
-            found_list.append(0)
+		image_results = csv.reader(csvfile, delimiter=',', quotechar='|')
 
-            for i in range(1, len(row), 2):
-                if (i+1) < len(row):
-                    
-                    # if any word from the image file is found in detected image list, add it to the found list
-                    image_found = False
-                    for word in image_name_words:
-                        if word in row[i]:
-                            image_found = True
+		for row in image_results:
+		    #condition the text file
+		    rm_text = row[0]
+		    image_name0 = rm_text.split(removed_text)
+		    image_name1 = image_name0[-1].replace('.jpg','')
+		    #split the image characteristics into lists
+		    image_name_list = image_name1.split("/")
+		    #get the individual words from the image type to compare to detection labels
+		    image_name_words = image_name_list[0].split('_')
+		    
+		    #format the found list
+		    found_list = []
+		    found_list.append(image_name_list[0])
+		    # combine image name and image number
+                    image_name   = image_name_list[0] 
+                    image_number = image_name_list[1]
+		    found_list.append(image_name + "_" + image_number); 
+                    distance     = int(image_name_list[2])
+		    found_list.append(distance)
+		    for i in range(3 ,len(image_name_list)):
+		        found_list.append(image_name_list[i])
+		    # Add the detection fillers
+		    found_list.append("")
+		    found_list.append(0)
 
-                    # if the threshold is met, add it to the found list
-                    confidence_string = row[i+1].replace("%",'')
-                    confidence        = float(confidence_string)
-                    if (image_found and confidence >= confidence_threshold):
-                        #Good detection, add to list or overwrite with best result 
-                        if found_list[-1] < confidence: 
-                            found_list[-2] = row[i]
-                            found_list[-1] = confidence
+		    fixed_parameters = current_network + ", " + image_name + ", " + image_number + ", " + str(distance)
+                    max_detection_line = fixed_parameters
+		    for i in range(1, len(row), 2):
+		        if (i+1) < len(row):
+		            
+		            # if any word from the image file is found in detected image list, add it to the found list
+		            image_found = False
+		            for word in image_name_words:
+		                if word in row[i]:
+		                    image_found = True
 
-            formatted_detection.append(found_list)
-        return formatted_detection  
+		            # if the threshold is met, add it to the found list
+		            confidence_string = row[i+1].replace("%",'')
+		            confidence        = float(confidence_string)
+		            if (image_found and confidence >= confidence_threshold):
+		                #Good detection, add to list or overwrite with best result 
+		                if found_list[-1] < confidence: 
+		                    found_list[-2] = row[i]
+		                    found_list[-1] = confidence
+		                    # save the single element with the highest detection that matches 
+		                    max_detection_line = fixed_parameters + ", " + row[i] + ", " + str(confidence)
+                    filteredfile.write(max_detection_line)
+                    filteredfile.write("\n")
+		    formatted_detection.append(found_list)
+		csvfile.close()
+                filteredfile.close()
+		return formatted_detection  
 
 ##############################################################################
 # Group the sub-groupings (ex: imagetype1_1, imagetype1_2, etc)  
@@ -237,9 +255,9 @@ def plot_the_data(results_dictionary):
         y_lists = []
         sub_bar_labels = []
 
-        print "-------------------"
-        print sorted_dict
-        print ""
+        #print "-------------------"
+        #print sorted_dict
+        #print ""
 
 
         # Loop through the image subtypes and formulate the data into the lists plot_multibar expects (ex: Cars_1, Cars_2, etc)
@@ -287,18 +305,18 @@ for csv_file in os.listdir(csv_file_path):
         network_name = temp_split[0].replace("results_",'')
 
         # read the files and organize the data
-        csv_file_path           = results_path + "/" + csv_file
-        single_nework_file_read = read_csv(csv_file_path, threshold, folder_path)
+        csv_file_path           = results_path + csv_file
+	filtered_path           = results_path + "filtered_results"
+        single_nework_file_read = read_csv(csv_file_path, threshold, folder_path, filtered_path)
         single_nework_file_read.sort(key=lambda x:x[2]) # sort by element 2
         single_nework_file_read.sort()
-        
         
         #single_network_data     = organize_data(single_nework_file_read, network_name)
         #master_list.append(single_network_data)
         master_dict     = organize_data(single_nework_file_read, network_name,master_dict)
 
 
-print master_dict
+#print master_dict
 
 #master_dict = convert_to_dictionary(master_list)
 
